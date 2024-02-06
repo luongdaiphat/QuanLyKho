@@ -9,8 +9,14 @@ namespace QuanLyKho.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
+        public bool Isloaded { get; set; }
         public MainViewModel() {
-            MessageBox.Show("Ok");
+            if (!Isloaded)
+            {
+                Isloaded = true;
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.ShowDialog();
+            }
         }
     }
 }
