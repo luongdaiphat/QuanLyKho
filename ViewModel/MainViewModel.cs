@@ -19,7 +19,7 @@ namespace QuanLyKho.ViewModel
                 LoginWindow loginWindow = new LoginWindow();
                 loginWindow.ShowDialog();
             }
-              );
+            );
         }
     }
 }
