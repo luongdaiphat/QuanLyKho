@@ -38,6 +38,7 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0" 
                             Background="#FFFFFF" 
@@ -291,6 +292,48 @@
                             </Button>
                         </Grid>
                     </Border>
+                    <Border Grid.Column="6" 
+                            Background="#FFFFFF" 
+                            CornerRadius="20"  
+                            BorderBrush="Gray" 
+                            BorderThickness="0.5">  
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" 
+                            Content="Người dùng" FontSize="24" 
+                            FontFamily="Paytone One"/>
+                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border CornerRadius="15" BorderThickness="0">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Background" Value="Transparent"/>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="LightBlue"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsMouseOver" Value="False">
+                                                            <Setter Property="Background" Value="CadetBlue"/>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+                                            <Grid>
+                                                <TextBlock Text="+"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Paytone One" FontSize="24" Foreground="White" >
+                                                </TextBlock>
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                    </Border>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
@@ -353,7 +396,7 @@
                                                             <Setter Property="Background" Value="Transparent"/>
                                                             <Style.Triggers>
                                                                 <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Background" Value="MediumPurple"/>
+                                                                    <Setter Property="Background" Value="Purple"/>
                                                                 </Trigger>
                                                                 <Trigger Property="IsMouseOver" Value="False">
                                                                     <Setter Property="Background" Value="MediumPurple"/>
@@ -500,7 +543,7 @@
                                                             <Setter Property="Background" Value="Transparent"/>
                                                             <Style.Triggers>
                                                                 <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Background" Value="MediumPurple"/>
+                                                                    <Setter Property="Background" Value="Purple"/>
                                                                 </Trigger>
                                                                 <Trigger Property="IsMouseOver" Value="False">
                                                                     <Setter Property="Background" Value="MediumPurple"/>
