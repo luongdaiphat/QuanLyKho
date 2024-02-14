@@ -12,7 +12,7 @@
         Background="Transparent"
         Height="800" Width="500">
     <Grid>
-        <Border Background="White">
+        <Border Background="White" CornerRadius="20" BorderThickness="0.5" BorderBrush="Gray">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"></RowDefinition>
@@ -26,14 +26,20 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="1">
+                <Grid Grid.Row="0" Grid.Column="1" Background="MediumPurple">
                     <uc:ControlBarUC HorizontalAlignment="Right" VerticalAlignment="Center"></uc:ControlBarUC>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Border Background="White" CornerRadius="20" Margin="5" BorderThickness="0.5" BorderBrush="Gray">
+                        <TextBlock Text="{Binding Displayname}" Margin="5" FontSize="30" VerticalAlignment="Center" ></TextBlock>
+                    </Border>
                 </Grid>
                 <Grid Grid.Row="2">
 
                     <WrapPanel Background="White">
 
-                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5">
+                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5"
+                                Command="{Binding AddCommand}">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="15" BorderThickness="0">
@@ -58,7 +64,8 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5">
+                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5"
+                                Command="{Binding DeleteCommand}">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="15" BorderThickness="0">
@@ -83,7 +90,8 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5">
+                        <Button HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Margin="5"
+                                Command="{Binding EditCommand}">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border CornerRadius="15" BorderThickness="0">
@@ -113,8 +121,13 @@
                 <Grid Grid.Row="3">
                     <Border>
                         <Grid>
-                            <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
-
+                            <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" Margin="8">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên đơn vị đo" DisplayMemberBinding="{Binding Displayname}"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
                             </ListView>
                         </Grid>
                     </Border>
