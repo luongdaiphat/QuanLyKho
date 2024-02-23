@@ -224,7 +224,7 @@
                             VerticalAlignment="Center" 
                             Content="Nhà cung cấp" FontSize="24" 
                             FontFamily="Paytone One"/>
-                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand">
+                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Command="{Binding SuplierCommand}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border CornerRadius="15" BorderThickness="0">
