@@ -13,6 +13,8 @@ namespace QuanLyKho.ViewModel
         public bool Isloaded { get; set; }
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand UnitCommand { get; set; }
+
+        public ICommand SupplierCommand { get; set; }
     
 
         public MainViewModel() {
@@ -22,14 +24,22 @@ namespace QuanLyKho.ViewModel
                 loginWindow.ShowDialog();
             }
             );
-            //UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
-                
-            //    UnitWindow wd = new UnitWindow();
-            //    wd.ShowDialog();
-            //}
-            //);
+            UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
 
-            
+                UnitWindow wd = new UnitWindow();
+                wd.ShowDialog();
+            }
+            );
+
+            SupplierCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+
+                SupplierWindow wd = new SupplierWindow();
+                wd.ShowDialog();
+            }
+            );
+
         }
     }
 }
