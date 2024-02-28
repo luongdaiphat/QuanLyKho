@@ -16,7 +16,7 @@
         <Border Background="#F8F7F8" CornerRadius="50" BorderBrush="Gray" BorderThickness="0.5">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="72.636"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="3.5*"></RowDefinition>
                     <RowDefinition Height="70"></RowDefinition>
@@ -179,7 +179,8 @@
                             <Label 
                             HorizontalAlignment="Center" 
                             VerticalAlignment="Center" 
-                            Content="Đơn vị đo" FontSize="24" 
+                            Content="Đơn vị đo" 
+                            FontSize="24" 
                             FontFamily="Paytone One"/>
                             <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand"
                                     Command="{Binding UnitCommand}">

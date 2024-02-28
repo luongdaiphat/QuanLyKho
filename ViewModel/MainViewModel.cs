@@ -22,14 +22,15 @@ namespace QuanLyKho.ViewModel
                 loginWindow.ShowDialog();
             }
             );
-            //UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
-                
-            //    UnitWindow wd = new UnitWindow();
-            //    wd.ShowDialog();
-            //}
-            //);
+            UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
 
-            
+                UnitWindow wd = new UnitWindow();
+                wd.ShowDialog();
+            }
+            );
+
+
         }
     }
 }
