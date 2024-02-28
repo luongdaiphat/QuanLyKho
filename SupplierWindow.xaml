@@ -44,7 +44,7 @@
                                 <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
                                 <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
                                 <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="1350" Text="{Binding Displayname}"></TextBox>
+                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
                             
                             </WrapPanel>
                         </ScrollViewer>
