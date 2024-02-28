@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho"
         mc:Ignorable="d"
-        xmlns:uc="clr-namespace:QuanLyKho.UserControlPhat"
+        xmlns:uc="clr-namespace:QuanLyKho.UserControlPhat" xmlns:viewmodel="clr-namespace:QuanLyKho.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         DataContext="{StaticResource MainVM}"      
          WindowStartupLocation="CenterScreen"
             WindowStyle="None"
@@ -225,7 +225,8 @@
                             VerticalAlignment="Center" 
                             Content="Nhà cung cấp" FontSize="24" 
                             FontFamily="Paytone One"/>
-                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Command="{Binding SuplierCommand}">
+                            <Button Grid.Row="1" 
+                                    HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand" Command="{Binding SupplierCommand}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border CornerRadius="15" BorderThickness="0">
