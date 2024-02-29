@@ -27,6 +27,14 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                 </Grid>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Label HorizontalAlignment="Left" 
+                           VerticalAlignment="Center" 
+                           Content="Trang chủ" 
+                           FontSize="40" Margin="30,0,0,0"
+                           FontFamily="Paytone One"
+                           Foreground="Purple"/>        
+                </Grid>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <uc:ControlBarUC HorizontalAlignment="Right" VerticalAlignment="Center"></uc:ControlBarUC>
                 </Grid>
@@ -44,7 +52,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -86,7 +94,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -128,7 +136,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -139,7 +147,12 @@
                             VerticalAlignment="Center" 
                             Content="Vật tư" FontSize="24" 
                             FontFamily="Paytone One"/>
-                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand">
+                            <Button Grid.Row="1" 
+                                    HorizontalAlignment="Center" 
+                                    Width="150" Height="50" 
+                                    VerticalAlignment="Center" 
+                                    Cursor="Hand"
+                                    Command="{Binding ObjectCommand}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border CornerRadius="15" BorderThickness="0">
@@ -170,11 +183,11 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
+                                <RowDefinition/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Label 
                             HorizontalAlignment="Center" 
@@ -185,10 +198,10 @@
                             <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand"
                                     Command="{Binding UnitCommand}">
                                 <Button.Template>
-                                    <ControlTemplate TargetType="Button">
+                                    <ControlTemplate TargetType="{x:Type Button}">
                                         <Border CornerRadius="15" BorderThickness="0">
                                             <Border.Style>
-                                                <Style TargetType="Border">
+                                                <Style TargetType="{x:Type Border}">
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Style.Triggers>
                                                         <Trigger Property="IsMouseOver" Value="True">
@@ -201,8 +214,7 @@
                                                 </Style>
                                             </Border.Style>
                                             <Grid>
-                                                <TextBlock Text="+"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Paytone One" FontSize="24" Foreground="White" >
-                                                </TextBlock>
+                                                <TextBlock Text="+"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Paytone One" FontSize="24" Foreground="White" />
                                             </Grid>
                                         </Border>
                                     </ControlTemplate>
@@ -214,7 +226,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -257,7 +269,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">
+                            BorderThickness="0.5" Margin="5 5 15 5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -268,7 +280,13 @@
                             VerticalAlignment="Center" 
                             Content="Khách hàng" FontSize="24" 
                             FontFamily="Paytone One"/>
-                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand">
+                            <Button Grid.Row="1" 
+                                    HorizontalAlignment="Center" 
+                                    Width="150" Height="50" 
+                                    VerticalAlignment="Center" 
+                                    Cursor="Hand"
+                                    Command="{Binding CustomerCommand}">
+                                    
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border CornerRadius="15" BorderThickness="0">
@@ -299,7 +317,7 @@
                             Background="#FFFFFF" 
                             CornerRadius="20"  
                             BorderBrush="Gray" 
-                            BorderThickness="0.5">  
+                            BorderThickness="0.5" Margin="5 5 15 5">  
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -310,7 +328,12 @@
                             VerticalAlignment="Center" 
                             Content="Người dùng" FontSize="24" 
                             FontFamily="Paytone One"/>
-                            <Button Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="50" VerticalAlignment="Center" Cursor="Hand">
+                            <Button Grid.Row="1" 
+                                    HorizontalAlignment="Center" 
+                                    Width="150" Height="50" 
+                                    VerticalAlignment="Center" 
+                                    Cursor="Hand"
+                                    Command="{Binding UserCommand}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border CornerRadius="15" BorderThickness="0">

@@ -36,15 +36,40 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <ScrollViewer>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <WrapPanel>
                             
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
-                                <TextBox Margin="10" Height="60" Width="130" Text="{Binding Displayname}"></TextBox>
+                                <TextBox Margin="10" Height="40" 
+                                         Width="130" Text="{Binding Displayname, UpdateSourceTrigger=PropertyChanged}"
+                                         FontFamily="Paytone One"
+                                         TextWrapping="Wrap"
+                                         FontSize="20"></TextBox>
+                                <TextBox Margin="10" Height="40" 
+                                         Width="130" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}"
+                                         FontFamily="Paytone One"
+                                         TextWrapping="Wrap"
+                                         FontSize="20"></TextBox>
+                                <TextBox Margin="10" Height="40" 
+                                         Width="130" 
+                                         Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
+                                         TextWrapping="Wrap"
+                                         FontFamily="Paytone One"
+                                         FontSize="20"></TextBox>
+                                <TextBox Margin="10" Height="40" 
+                                         Width="130" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
+                                         TextWrapping="Wrap"
+                                         FontFamily="Paytone One"
+                                         FontSize="20"></TextBox>
+                                <TextBox Margin="10" Height="40" 
+                                         Width="130" Text="{Binding MoreInfo, UpdateSourceTrigger=PropertyChanged}"
+                                         TextWrapping="Wrap"
+                                         FontFamily="Paytone One"
+                                         FontSize="20"></TextBox>
+                                <DatePicker Margin="10"  
+                                         Height="40"
+                                         SelectedDate="{Binding ContractDate, UpdateSourceTrigger=PropertyChanged}"
+                                         FontFamily="Paytone One"
+                                         FontSize="20"></DatePicker>
                             
                             </WrapPanel>
                         </ScrollViewer>
@@ -136,20 +161,21 @@
                         </WrapPanel>
                     </Grid>
                     <Grid Grid.Row="2">
-                        <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" Margin="25">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                                    <GridViewColumn Header="Tên nhà cung cấp" DisplayMemberBinding="{Binding Displayname}"></GridViewColumn>
-                                    <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                                    <GridViewColumn Header="Số điện thoại" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                                    <GridViewColumn Header="Ngày hợp tác" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                                    <GridViewColumn Header="Thông tin khác" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" Margin="25">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên nhà cung cấp" DisplayMemberBinding="{Binding Displayname}"></GridViewColumn>
+                                        <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding Address}"></GridViewColumn>
+                                        <GridViewColumn Header="Số điện thoại" DisplayMemberBinding="{Binding Phone}"></GridViewColumn>
+                                        <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"></GridViewColumn>
+                                        <GridViewColumn Header="Ngày hợp tác" DisplayMemberBinding="{Binding ContractDate}"></GridViewColumn>
+                                        <GridViewColumn Header="Thông tin khác" DisplayMemberBinding="{Binding MoreInfo}"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </ScrollViewer>
                     </Grid>
                 </Grid>
             </Grid>
